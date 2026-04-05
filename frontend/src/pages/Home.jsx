@@ -32,7 +32,7 @@ function Home() {
     try {
       setLoading(true);
       const res = await fetch(
-        `http://localhost:3000/villages?q=${encodeURIComponent(query)}`
+        `https://village-backend.onrender.com/api/v1/villages/search?q=${encodeURIComponent(query)}`
       );
       const data = await res.json();
       setResults(data.slice(0, 6));
